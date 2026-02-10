@@ -1,0 +1,187 @@
+/* --- Variáveis de Cores (Paleta Frutos do Mar) --- */
+:root {
+    --mar-profundo: #0E2A3A;    /* Azul Petróleo Escuro */
+    --camarao-vivo: #FF6B4A;    /* Laranja Coral Vibrante (Ação) */
+    --areia-praia: #F7F5F0;     /* Off-white para fundo */
+    --dourado-premio: #E6B800;  /* Amarelo Ouro */
+    --cinza-texto: #333333;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--areia-praia);
+    color: var(--cinza-texto);
+    line-height: 1.6;
+}
+
+/* --- Cabeçalho --- */
+header {
+    background-color: var(--mar-profundo);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 { font-size: 1.5rem; letter-spacing: 1px; }
+.destaque-logo { color: var(--camarao-vivo); }
+.subtitulo { font-size: 0.8rem; opacity: 0.8; }
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.menu a:hover { color: var(--camarao-vivo); }
+
+.btn-contato {
+    background-color: var(--camarao-vivo);
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+/* --- Hero Section --- */
+#hero {
+    height: 70vh;
+    background: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    background: rgba(14, 42, 58, 0.85); /* Filtro azul escuro */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    max-width: 600px;
+}
+
+.badge-premio {
+    background-color: var(--dourado-premio);
+    color: var(--mar-profundo);
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.cta-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-primary, .btn-whatsapp {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.btn-primary { background-color: white; color: var(--mar-profundo); }
+.btn-whatsapp { background-color: #25D366; color: white; }
+.btn-primary:hover, .btn-whatsapp:hover { transform: scale(1.05); }
+
+/* --- Destaques --- */
+#destaques { padding: 60px 0; }
+.titulo-secao { text-align: center; color: var(--mar-profundo); margin-bottom: 40px; font-size: 2rem; }
+
+.grid-pratos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.prato-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    border-bottom: 4px solid var(--camarao-vivo);
+    transition: 0.3s;
+}
+
+.prato-card:hover { transform: translateY(-5px); }
+
+.destaque-principal {
+    border: 2px solid var(--dourado-premio);
+    background: #fffdf5;
+}
+
+.prato-img { font-size: 3rem; margin-bottom: 10px; }
+.preco { display: block; margin-top: 15px; font-weight: bold; color: var(--camarao-vivo); font-size: 1.1rem; }
+
+/* --- Sobre --- */
+#sobre { background-color: white; padding: 60px 0; }
+.sobre-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: center; }
+
+.dado-item {
+    background: var(--mar-profundo);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.dado-item span { font-size: 2rem; font-weight: bold; color: var(--dourado-premio); }
+
+/* --- Footer --- */
+footer {
+    background-color: var(--mar-profundo);
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.status-funcionamento {
+    margin-top: 15px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.aberto { background-color: #2ecc71; color: #004d26; }
+.fechado-status { background-color: #e74c3c; color: white; }
+
+.copyright { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.9rem; }
